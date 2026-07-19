@@ -12,6 +12,7 @@ const lifestyleCards = [
     subtitle: "Keep your energy up and your glow on",
     description: "Radiance. Confidence. Unstoppable energy. Hydration that powers your body, mind, and inner glow.",
     image: "/image/20220408_090030.jpg",
+    objectPosition: "center 40%",
   },
   {
     title: "Fitness Fanatic",
@@ -19,6 +20,7 @@ const lifestyleCards = [
     description:
       "Strength. Stamina. Peak performance. Hydration that fuels your muscles, boosts endurance, and speeds recovery.",
     image: "/image/lifestyle_fitness.png",
+    objectPosition: "center",
   },
   {
     title: "Beauty Lover",
@@ -26,6 +28,7 @@ const lifestyleCards = [
     description:
       "Glow. Vitality. Wellness. Hydration that keeps your skin plump, smooth, and youthful while nourishing your body inside and out.",
     image: "/image/20220407_112224.jpg",
+    objectPosition: "center 20%",
   },
   {
     title: "Globe Trotter",
@@ -33,13 +36,15 @@ const lifestyleCards = [
     description:
       <>Refreshed. Energized. Limitless. Hydration that sharpens focus, boosts energy, and keeps you ready for <span>EV</span>ery adventure—near or far.</>,
     image: "/image/lifestyle_traveler.png",
+    objectPosition: "center 40%",
   },
   {
     title: "Busy Professional",
     subtitle: "Stay sharp, focused, and productive",
     description:
       "Focus. Clarity. Vitality. Hydration that powers your brain, sharpens memory, and uplifts your mood for long, demanding days.",
-    image: "/image/20220204_103249.jpg",
+    image: "/image/20220209_123456 copy.jpg",
+    objectPosition: "center 20%",
   },
   {
     title: "Student & Learner",
@@ -47,6 +52,7 @@ const lifestyleCards = [
     description:
       "Alert. Inspired. Energized. Hydration that supports your mind and body, keeping you sharp during study, work, and creative pursuits.",
     image: "/image/20220411_095458 copy.jpg",
+    objectPosition: "center 20%",
   },
   {
     title: "Pregnant & Nursing Moms",
@@ -54,12 +60,14 @@ const lifestyleCards = [
     description:
       "Nourish. Thrive. Care. Hydration that supports healthy digestion, circulation, and overall wellness for both mom and baby.",
     image: "/image/lifestyle_mother.png",
+    objectPosition: "center 25%",
   },
   {
     title: "Growing Children",
     subtitle: "Essential for learning, energy, and healthy growth",
     description: "Active. Focused. Bright. Hydration that keeps kids alert, energized, and engaged all day long.",
     image: "/image/20241025_114511.jpg",
+    objectPosition: "top",
   },
   {
     title: "Restoring Your Health",
@@ -67,6 +75,7 @@ const lifestyleCards = [
     description:
       "Strong. Balanced. Vital. Hydration that boosts your immune system, supports detoxification, and replenishes your body efficiently.",
     image: "/image/lifestyle_recovery.png",
+    objectPosition: "center",
   },
 ]
 
@@ -108,14 +117,16 @@ export default function LifestyleSlider() {
                 <div key={idx} className="w-full flex-shrink-0 px-4">
                   <div className="bg-white rounded-lg overflow-hidden shadow-lg hover:shadow-2xl transition-shadow duration-300">
                     {/* Image */}
-                    <div className="relative h-80 overflow-hidden">
+                    <div className="relative h-96 overflow-hidden w-full bg-slate-100">
                       <Image
                         src={card.image || "/placeholder.svg"}
                         alt={card.title}
                         fill
                         className="object-cover transform hover:scale-105 transition-transform duration-500"
+                        style={{ objectPosition: card.objectPosition }}
+                        sizes="(max-width: 768px) 100vw, 33vw"
                       />
-                      <div className="absolute inset-0 bg-gradient-to-t from-[#005B8E]/60 to-transparent" />
+                      <div className="absolute inset-0 bg-gradient-to-t from-black/25 to-transparent pointer-events-none" />
                     </div>
 
                     <div className="p-8 space-y-4">

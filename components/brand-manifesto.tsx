@@ -2,7 +2,7 @@ import { EvixText } from "@/components/evix-text"
 
 export default function BrandManifesto() {
   return (
-    <section id="about" className="relative py-24 md:py-32 overflow-hidden">
+    <section className="relative py-24 md:py-32 overflow-hidden">
       {/* Background texture */}
       <div className="absolute inset-0 bg-gradient-to-b from-white via-[#F4F7F6] to-white" />
       <div
@@ -37,14 +37,15 @@ export default function BrandManifesto() {
           {/* Body text */}
           <div className="space-y-6">
             <p className="text-lg md:text-xl lg:text-2xl text-[#64748B] leading-relaxed font-light max-w-3xl mx-auto">
-              <EvixText /> naturally sourced still water fuels your life <span>EV</span>ery day. From workouts to radiant skin, <span>EV</span>ery sip
-              hydrates, energizes, and sharpens focus.
+              {/* naturally sourced still water fuels your life <span>EV</span>ery day. From workouts to radiant skin, <span>EV</span>ery sip
+              hydrates, energizes, and sharpens focus. */}
+              Discover <EvixText /> premium still water, naturally sourced for exceptional purity and crisp, refreshing hydration.  EVery sip refreshes, replenishes, and sharpens focus, crafted for those who value quality, wellness, and performance, from workouts to radiant skin.
             </p>
             <p className="text-2xl md:text-3xl font-serif text-[#005B8E] font-bold tracking-wide">
               Purity is our commitment.
             </p>
             <p className="text-xl md:text-2xl text-[#64748B] font-light">
-              Drink <EvixText />. <span className="text-[#C68E71] font-normal">Feel unstoppable.</span>
+              Drink <EvixText />. <span className="text-[#C68E71] font-normal">Keep winning.</span>
             </p>
           </div>
         </div>

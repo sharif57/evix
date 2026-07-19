@@ -5,6 +5,16 @@ import Link from "next/link"
 import { useState } from "react"
 import { Menu, X } from "lucide-react"
 
+const navItems = [
+  { label: "Natural Premium Water", section: "about" },
+  { label: "Products", section: "products" },
+  { label: "Where to Buy", section: "where-to-buy" },
+  { label: "Our Services", section: "services" },
+  { label: "EVIX® Cares", section: "sustainability" },
+  { label: "Our Team", section: "our-team" },
+  { label: "Contact Us", section: "contact" },
+]
+
 export default function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
 
@@ -32,66 +42,34 @@ export default function Header() {
           </Link>
 
           {/* Desktop Navigation */}
-          <nav className="hidden md:flex items-center gap-8">
-            <button
-              onClick={() => scrollToSection("products")}
-              className="cursor-pointer text-sm font-body text-slate-700 hover:text-[#005B8E] transition-colors"
-            >
-              Products
-            </button>
-            <button
-              onClick={() => scrollToSection("sustainability")}
-              className="cursor-pointer text-sm font-body text-slate-700 hover:text-[#005B8E] transition-colors"
-            >
-              Sustainability
-            </button>
-            <button
-              onClick={() => scrollToSection("where-to-buy")}
-              className="cursor-pointer text-sm font-body text-slate-700 hover:text-[#005B8E] transition-colors"
-            >
-              Where to Buy
-            </button>
-            <button
-              onClick={() => scrollToSection("contact")}
-              className="cursor-pointer text-sm font-body text-slate-700 hover:text-[#005B8E] transition-colors"
-            >
-              Contact Us
-            </button>
+          <nav className="hidden lg:flex items-center gap-6 xl:gap-8">
+            {navItems.map((item) => (
+              <button
+                key={item.section}
+                onClick={() => scrollToSection(item.section)}
+                className="cursor-pointer text-sm font-medium text-slate-700 hover:text-[#005B8E] transition-colors whitespace-nowrap"
+                dangerouslySetInnerHTML={{ __html: item.label.replace("EVIX®", "EVIX<sup>®</sup>") }}
+              />
+            ))}
           </nav>
 
           {/* Mobile menu button */}
-          <button onClick={() => setMobileMenuOpen(!mobileMenuOpen)} className="md:hidden p-2 text-[#005B8E]">
+          <button onClick={() => setMobileMenuOpen(!mobileMenuOpen)} className="lg:hidden p-2 text-[#005B8E]">
             {mobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
           </button>
         </div>
 
         {/* Mobile Navigation */}
         {mobileMenuOpen && (
-          <nav className="md:hidden pt-4 pb-2 flex flex-col gap-4">
-            <button
-              onClick={() => scrollToSection("products")}
-              className="cursor-pointer text-sm font-body text-slate-700 hover:text-[#005B8E] transition-colors py-2 text-left"
-            >
-              Products
-            </button>
-            <button
-              onClick={() => scrollToSection("sustainability")}
-              className="cursor-pointer text-sm font-body text-slate-700 hover:text-[#005B8E] transition-colors py-2 text-left"
-            >
-              Sustainability
-            </button>
-            <button
-              onClick={() => scrollToSection("where-to-buy")}
-              className="cursor-pointer text-sm font-body text-slate-700 hover:text-[#005B8E] transition-colors py-2 text-left"
-            >
-              Where to Buy
-            </button>
-            <button
-              onClick={() => scrollToSection("contact")}
-              className="cursor-pointer text-sm font-body text-slate-700 hover:text-[#005B8E] transition-colors py-2 text-left"
-            >
-              Contact Us
-            </button>
+          <nav className="lg:hidden pt-4 pb-2 flex flex-col gap-1 border-t border-gray-100 mt-4">
+            {navItems.map((item) => (
+              <button
+                key={item.section}
+                onClick={() => scrollToSection(item.section)}
+                className="cursor-pointer text-sm font-medium text-slate-700 hover:text-[#005B8E] hover:bg-[#F4F7F6] transition-colors py-3 px-2 text-left rounded-lg"
+                dangerouslySetInnerHTML={{ __html: item.label.replace("EVIX®", "EVIX<sup>®</sup>") }}
+              />
+            ))}
           </nav>
         )}
       </div>

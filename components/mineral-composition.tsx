@@ -1,37 +1,58 @@
 import { Bone, Activity, Heart, Shield, Droplet } from "lucide-react"
 import { EvixText } from "@/components/evix-text"
 
+// const minerals = [
+//   {
+//     icon: Bone,
+//     name: "Calcium (Ca)",
+//     benefit: "Supports strong bones and teeth, gentle enough for babies and pregnant women.",
+//   },
+//   {
+//     icon: Activity,
+//     name: "Magnesium (Mg)",
+//     benefit: "Aids muscle function, energy metabolism, and relaxation, helping your body stay balanced.",
+//   },
+//   {
+//     icon: Shield,
+//     name: "Potassium (K)",
+//     benefit: "Supports healthy heart and nerve function, and contributes to hydration balance.",
+//   },
+//   {
+//     icon: Heart,
+//     name: "Sodium (Na)",
+//     benefit: "Naturally low, perfect for low-sodium diets, babies, and kidney-friendly hydration.",
+//   },
+//   {
+//     icon: Droplet,
+//     name: "Bicarbonate (HCO₃⁻)",
+//     benefit: "Helps digestive comfort and kidney health, may reduce risk of kidney stones with regular hydration.",
+//   },
+// ]
 const minerals = [
   {
     icon: Bone,
-    name: "Calcium (Ca)",
-    benefit: "Supports strong bones and teeth, gentle enough for babies and pregnant women.",
+    name: "Naturally Sourced, Pure by Nature, Purposeful by Design",
+    benefit: <>At <EvixText />, we believe the finest hydration begins at the source, with an uncompromising dedication to quality. Sourced from pristine environments, our water delivers absolute purity and a clean, crisp finish in every drop.</>,
   },
   {
     icon: Activity,
-    name: "Magnesium (Mg)",
-    benefit: "Aids muscle function, energy metabolism, and relaxation, helping your body stay balanced.",
+    name: "Curated for Your Lifestyle",
+    benefit: <>
+      <EvixText /> creates water as dynamic as your lifestyle. Whether visionary, athlete, or jetsetter, you deserve a hydration experience curated for EVery You. EVery One. EVerywhere.
+    </>,
   },
   {
     icon: Shield,
-    name: "Potassium (K)",
-    benefit: "Supports healthy heart and nerve function, and contributes to hydration balance.",
-  },
-  {
-    icon: Heart,
-    name: "Sodium (Na)",
-    benefit: "Naturally low, perfect for low-sodium diets, babies, and kidney-friendly hydration.",
-  },
-  {
-    icon: Droplet,
-    name: "Bicarbonate (HCO₃⁻)",
-    benefit: "Helps digestive comfort and kidney health, may reduce risk of kidney stones with regular hydration.",
-  },
+    name: <>
+      The <EvixText /> collection
+    </>,
+    benefit: "From our signature blue bottles featuring curated creative expressions and premium sachets to our upcoming hydration systems and crystalline ice collections, we transform an everyday necessity into a statement of functional luxury.",
+  }
 ]
 
 export default function MineralComposition() {
   return (
-    <section className="py-24 md:py-32 bg-white">
+    <section id="about" className="py-24 md:py-32 bg-white">
       <div className="container mx-auto px-4">
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-start max-w-7xl mx-auto">
           {/* Left: Bottle image */}
@@ -57,17 +78,19 @@ export default function MineralComposition() {
           <div className="space-y-8 order-1 lg:order-2">
             <div className="space-y-4">
               <h2 className="font-serif text-4xl md:text-5xl lg:text-6xl text-[#005B8E] font-bold tracking-wide">
-                <EvixText /> Purity
+                {/* <EvixText /> Purity */}
+                Premium Water
               </h2>
               <p className="text-lg md:text-xl text-[#64748B] leading-relaxed">
-                <EvixText /> is naturally sourced still water from Lagos, Nigeria, drawn from protected underground reservoirs.
+                {/* <EvixText /> is naturally sourced still water from Lagos, Nigeria, drawn from protected underground reservoirs.
                 With exceptional purity, low minerals, and naturally low sodium, it is perfect for daily hydration, baby
-                formula, pregnancy, kidney-friendly diets, and overall well-being.
+                formula, pregnancy, kidney-friendly diets, and overall well-being. */}
+                The standard of excellence, rooted in Nigeria. Experience purity drawn directly from nature and carefully crafted to elevate every sip for EVery You. EVery One. EVerywhere.
               </p>
-              <p className="text-base text-[#64748B] leading-relaxed">
+              {/* <p className="text-base text-[#64748B] leading-relaxed">
                 Free from additives or chemicals, each bottle is rigorously tested to exceed the highest quality
                 standards. Hydrate with confidence and nourish your body, mind, and vitality.
-              </p>
+              </p> */}
             </div>
 
             {/* Mineral list */}

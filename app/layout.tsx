@@ -20,13 +20,13 @@ const lato = Lato({
 })
 
 export const metadata: Metadata = {
-  title: "EVIX - Naturally Sourced Water | Premium Mineral Water from Lagos",
+  title: "EVIX - Naturally Sourced Water | Premium Mineral Water from Nigeria",
   description:
-    "EVIX naturally sourced still water from Lagos, Nigeria. EVery you, EVeryone, EVeryWhere. Exceptional purity, low minerals, naturally low sodium. Perfect for daily hydration, baby formula, pregnancy, and kidney-friendly diets. Purity is our commitment.",
+    "EVIX naturally sourced still water from Nigeria. EVery you, EVeryone, EVeryWhere. Exceptional purity, low minerals, naturally low sodium. Perfect for daily hydration, baby formula, pregnancy, and kidney-friendly diets. Purity is our commitment.",
   keywords: [
     "EVIX water",
     "premium water Nigeria",
-    "Lagos mineral water",
+    "Nigeria mineral water",
     "naturally sourced water",
     "pyramid bottle water",
     "healthy hydration",

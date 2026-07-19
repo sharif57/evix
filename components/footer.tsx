@@ -1,6 +1,6 @@
 "use client"
 
-import { Instagram, Twitter, Facebook, Youtube, MessageCircle, Mail, Phone, Hash } from "lucide-react"
+import { Instagram, Twitter, Facebook, Youtube, MessageCircle, Mail, Phone, Hash, Recycle } from "lucide-react"
 import Image from "next/image"
 import { NewsletterForm } from "@/components/newsletter-form"
 import { EvixText } from "@/components/evix-text"
@@ -186,7 +186,7 @@ export default function Footer() {
         <div className="container mx-auto px-4 py-16">
           <div className="max-w-2xl mx-auto text-center space-y-6">
             <h3 className="font-serif text-3xl md:text-4xl font-bold tracking-wide">
-              Subscribe &amp; Join the #<EvixText withReg={false} />Squad
+              Subscribe to Pure Hydration
             </h3>
             <p className="text-white/80 text-lg">Get exclusive updates, offers, and sneak peeks at future products.</p>
             <NewsletterForm />
@@ -201,7 +201,7 @@ export default function Footer() {
           <div className="space-y-6">
             <Image src="/evix-logo.webp" alt="EVIX" width={150} height={50} className="h-10 w-auto brightness-0 invert" />
             <p className="text-white/80 leading-relaxed text-sm">
-              Naturally sourced still water from Lagos. Purity is our commitment.
+              Naturally sourced still water from Nigeria. Purity is our commitment.
             </p>
           </div>
 
@@ -244,10 +244,12 @@ export default function Footer() {
 
           {/* Sustainability note */}
           <div className="space-y-6">
-            <h4 className="font-serif text-xl font-semibold tracking-wide">EVIX® Cares</h4>
+            <div className="flex items-center gap-2">
+              <Recycle className="w-5 h-5 text-[#C68E71]" />
+              <h4 className="font-serif text-xl font-semibold tracking-wide">Sustainability</h4>
+            </div>
             <p className="text-white/80 text-sm leading-relaxed">
-              Please recycle or place your <EvixText /> bottle in a bin to help keep our world clean.
-              <span className="block mt-2 text-[#C68E71] font-semibold">#EVIXCares</span>
+              Please recycle or place your <EvixText /> packaging in a bin to help keep Nigeria and the world clean.
             </p>
           </div>
         </div>
@@ -257,7 +259,7 @@ export default function Footer() {
       <div className="border-t border-white/10">
         <div className="container mx-auto px-4 py-6">
           <div className="flex flex-col md:flex-row items-center justify-between gap-4 text-xs text-white/50">
-            <p><EvixText /> LIMITED | NAFDAC REG. NO: A1-108691L</p>
+            <p><EvixText /> NIGERIA LIMITED | NAFDAC REG. NO: A1-108691L</p>
             <p>© <CopyrightYear /> <EvixText /> All rights reserved.</p>
           </div>
         </div>
